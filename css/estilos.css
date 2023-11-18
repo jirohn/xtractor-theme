@@ -5,20 +5,28 @@
     background-color: #5e9cd4;
     width: 30%!important;
     border-right: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
   }
   /*el contenido debe ir a la izquierda del sidebar*/
     .content {
         float: left;
         background-color: #5e9dd480;
         width: 70%!important;
+        margin: 10px;
+        padding: 10px;
+
 
     }
     /* main content abarca el contenido y el sidebar debe estar uno al lado del otro*/
     .main-content {
         width: 100%;
-        margin: 0 auto;
+
         /* el contenido debe estar inline-block */
         display: inline-flex;
+        margin: 10px;
+        padding: 10px;
+
     }
   /* Estilos para los menús */
   .menu {
@@ -27,9 +35,9 @@
   }
   .logo img {
     padding: 10px;
-    width: 2em!important;
-    height: 2em!important;
-
+    width: 3em!important;
+    height: 3em!important;
+    float: left!important;
     color: #fff;
     text-align: center;
     font-size: 20px;
@@ -39,12 +47,19 @@
     /* el menu debe ir al lado del logo pegado a la derecha*/
 
     float: right!important;
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 20px;
+    margin: 1em;
     /* aumentamos el tamaño de la fuente */
     font-size: 1.2em;
     /* fuente en negrita */
     font-weight: bold;
+    padding: 10px;
+  }
+  .contextual-region{
+    background-color: #ffffff80;
+    border-radius: 20px;
+    margin: 1em;
+    padding: 10px;
   }
   .navigation a
     {
@@ -77,9 +92,19 @@
 .header {
     display: inline-flex;
     /*los elementos deben estar uno al lado del otro ocupando el 100% del espacio*/
-
+    justify-content: space-between;
 
     
+    width: 100%;
+    background-color: #9455a28a;
+    margin: 10px;
+  }
+  footer {
+    display: inline-flex;
+    /*los elementos deben estar uno al lado del otro ocupando el 100% del espacio*/
+    justify-content: space-between;
+
+    height: 10em;
     width: 100%;
     background-color: #9455a28a;
   }
