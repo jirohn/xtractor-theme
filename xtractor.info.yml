@@ -1,0 +1,13 @@
+name: Xtractor
+type: theme
+core_version_requirement: ^10
+base theme: stable9
+visible: true
+libraries:
+  - xtractor/global-styling
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer: Footer

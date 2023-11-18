@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+
+    <img src="./sites/default/files/cropped-teteamefullres-1_2.png" alt="Google">
+    
+  </div>
+  <div class="site-name">
+    <h1><a href="./">Texteame</a></h1>
+  </div>
+    <div class="navigation">
+    <!-- añadimos un enlace a la direccion de la pagina seguido de /node/add/pagina_de_extraccion -->
+        <!-- si el usuario esta conectado en twig de drupal -->
+        {% if user.isAuthenticated() %}
+        <a href="./node/add/pagina_de_extraccion">Añadir página</a>
+        <a href="./node/add/mensajes">Añadir mensaje</a>
+        <a href="./node/add/clientes">Añadir cliente</a>
+        <a href="./user/logout">Cerrar sesión</a>
+        {% endif %}
+        <!-- si el usuario no esta conectado en twig de drupal -->
+        {% if not user.isAuthenticated() %}
+        <a href="./user/login">Iniciar sesión</a>
+        <a href="./user/register">Registrarse</a>
+        {% endif %}
+
+
+      
+    </div>
+  
+  {% if page.header %}
+    {{ page.header }}
+  {% endif %}
+  
+  
+</header>
+
+<div class="main-content">
+  <section class="content">
+    {{ page.content }}
+  </section>
+  <aside class="sidebar">
+    {% if page.sidebar_first %}
+      {{ page.sidebar_first }}
+    {% endif %}
+  </aside>
+</div>
+
+<footer>
+  {{ page.footer }}
+</footer>
+</body>
+</html>

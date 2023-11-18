@@ -1,0 +1,88 @@
+/* Estilos para la barra lateral */
+.sidebar {
+    /* el sidebar debe ir al lado del contenido */
+    float: right;
+    background-color: #5e9cd4;
+    width: 30%!important;
+    border-right: 1px solid #ccc;
+  }
+  /*el contenido debe ir a la izquierda del sidebar*/
+    .content {
+        float: left;
+        background-color: #5e9dd480;
+        width: 70%!important;
+
+    }
+    /* main content abarca el contenido y el sidebar debe estar uno al lado del otro*/
+    .main-content {
+        width: 100%;
+        margin: 0 auto;
+        /* el contenido debe estar inline-block */
+        display: inline-flex;
+    }
+  /* Estilos para los menús */
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  .logo img {
+    padding: 10px;
+    width: 2em!important;
+    height: 2em!important;
+
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+ .navigation {
+    /* el menu debe ir al lado del logo pegado a la derecha*/
+
+    float: right!important;
+    border-radius: 10px;
+    margin: 10px;
+    /* aumentamos el tamaño de la fuente */
+    font-size: 1.2em;
+    /* fuente en negrita */
+    font-weight: bold;
+  }
+  .navigation a
+    {
+        /*añadimos pading y margin*/
+        padding: 10px;
+        margin: 10px;
+
+        color: #ffffff;
+        text-decoration: none;
+        border: #ffffff;
+        background-color: #0275d8;
+        border-radius: 10%;
+    }
+  .menu-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu-item a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .menu-item a:hover {
+    color: #0275d8;
+  }
+/* estilos para el menu principal */
+/* Contenedor del header */
+/* Ajusta la estructura del encabezado */
+.header {
+    display: inline-flex;
+    /*los elementos deben estar uno al lado del otro ocupando el 100% del espacio*/
+
+
+    
+    width: 100%;
+    background-color: #9455a28a;
+  }
+  
+
+  
