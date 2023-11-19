@@ -181,20 +181,34 @@ footer {
 }
 /* la cartela y su contenido ocupa el ancho completo */
 .cartela {
+  /* cada elemento ira uno debajo del otro */
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  /* le damos un degradado a blanco hacia abajo */
-  background-image: linear-gradient(to bottom, #5C9BD331, #fff);
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  /* centramos el contenido a lo alto y lo colocamos a la derecha */
-  display: inline-flex;
-  align-items: center;
-  float: left;
-  width: 100%;
-  height: 6em;
-}
+  margin: 0px;
+  padding: 0px;
 
+}
+/* las imagenes dentro de la cartela tendran un parallax */
+.cartela img {
+  /* le damos un ancho del 100% */
+  width: 100%;
+  /* le damos un alto de 20em */
+  height: 20em;
+  /* le damos un efecto de parallax */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* le damos un margen de 10px */
+  margin: 10px;
+  /* le damos un padding de 10px */
+  padding: 10px;
+  /* le damos un borde redondeado */
+  border-radius: 10px;
+  /* le damos un efecto de sombra */
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
 
 @media screen and (max-width: 600px) {
   .header {
