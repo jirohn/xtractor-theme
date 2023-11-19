@@ -21,6 +21,12 @@
     </nav>
   {% endif %}
 </header>
+<!-- añadimos la cartela con ancho completo que se lo daremos en los stilos -->
+{{ if page.cartela }}
+  <div class="cartela">
+    {{ page.cartela }}
+  </div>
+  {{ endif }}
 
 <div class="main-content clearfix">
   <section class="content">
