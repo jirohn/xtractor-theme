@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html>
+<head>
+
 </head>
 <body>
-<header class="header">
-  <div class="logo">
-
-    <!-- cargamos el logo de la pagina en drupal twig -->
-    <img src="{{ base_path ~ directory }}/logo.png" alt="Logo" />
-    
+<header class="header clearfix">  
+  <div class="site-branding-xtractr">
+    {% if page.header %}
+      {{ page.header }}
+    {% endif %}
   </div>
-  <div class="site-name">
-    <h1><a href="./">Texteame</a></h1>
-  </div>
-    <div class="navigation">
-    <!-- añadimos un enlace a la direccion de la pagina seguido de /node/add/pagina_de_extraccion -->
-        <!-- si el usuario esta conectado en twig de drupal -->
-        {% if user.isAuthenticated() %}
-        <a href="./node/add/pagina_de_extraccion">Añadir página</a>
-        <a href="./node/add/mensajes">Añadir mensaje</a>
-        <a href="./node/add/clientes">Añadir cliente</a>
-        <a href="./user/logout">Cerrar sesión</a>
-        {% endif %}
-        <!-- si el usuario no esta conectado en twig de drupal -->
-        {% if not user.isAuthenticated() %}
-        <a href="./user/login">Iniciar sesión</a>
-        <a href="./user/register">Registrarse</a>
-        {% endif %}
-
-
-      
-    </div>
-  
-  {% if page.header %}
-    {{ page.header }}
+  {% if page.navigation %}
+    <nav class="navigation">
+      {{ page.navigation }}
+    </nav>
   {% endif %}
-  
-  
+  {% if page.primary_menu %}
+    <nav class="primary-menu">
+      {{ page.primary_menu }}
+    </nav>
+  {% endif %}
 </header>
 
-<div class="main-content">
+<div class="main-content clearfix">
   <section class="content">
     {{ page.content }}
   </section>
   {% if user.isAuthenticated() %}
-  <aside class="sidebar">
-    {% if page.sidebar_first %}
-      {{ page.sidebar_first }}
-    {% endif %}
-  </aside>
+    <aside class="sidebar">
+      {% if page.sidebar_first %}
+        {{ page.sidebar_first }}
+      {% endif %}
+    </aside>
   {% endif %}
 </div>
+
+<footer>
+  <div class="footer-content">
+    {{ page.footer }}
+  </div>
+  <h1>Texteame 2023, Grupo TTA</h1>
+</footer>
+</body>
+</html>
 
 <footer>
   {{ page.footer }}
