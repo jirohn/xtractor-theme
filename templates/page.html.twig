@@ -4,7 +4,12 @@
 
 </head>
 <body>
-<header class="header clearfix">  
+<header class="header clearfix"> 
+  {% if page.primary_menu %}
+    <nav class="primary-menu">
+      {{ page.primary_menu }}
+    </nav>
+  {% endif %} 
   <div class="site-branding-xtractr">
     {% if page.header %}
       {{ page.header }}
@@ -13,11 +18,6 @@
   {% if page.navigation %}
     <nav class="navigation">
       {{ page.navigation }}
-    </nav>
-  {% endif %}
-  {% if page.primary_menu %}
-    <nav class="primary-menu">
-      {{ page.primary_menu }}
     </nav>
   {% endif %}
 </header>
@@ -44,9 +44,3 @@
 </body>
 </html>
 
-<footer>
-  {{ page.footer }}
-  <h1>Texteame 2023, Grupo TTA</h1>
-</footer>
-</body>
-</html>

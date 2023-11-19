@@ -10,18 +10,30 @@
   float: right;
   background-color: #5e9cd480;
   width: 30%;
-  border-right: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 4em;
+  margin: 2em;
 }
-
+/* el body ocupa todo el ancho de la pantalla */
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #fff;
+}
 /* Estilos para el contenido */
 .content {
   float: left;
   background-color: #5e9dd480;
   width: 70%;
-  margin: 10px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 4em;
+  margin: 2em;
+
 }
 
 /* Estilos para el contenedor principal */
@@ -31,11 +43,14 @@
   padding: 10px;
 }
 .xtractr-telefono{
-
   width: 100%;
   background-color: #9455a280;
   margin: 10px;
   padding: 10px;
+  align-items: center;
+}
+.xtractr-enviar{
+  float: right;
 }
 /* Estilos para el logo */
 .logo img {
@@ -63,21 +78,17 @@
   border-radius: 10%;
 }
 
-/* Estilos para los elementos del menú */
-.menu-item {
-  display: inline-block; /* Para mostrar los elementos del menú en línea */
-  border-bottom: none; /* Removido ya que no es necesario en menú horizontal */
-}
 
 /* Estilos para el encabezado */
 .header {
-  display: flex;
+  display: inline-table;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #9455a280;
-  margin: 0px 10px;
-  padding: 10px;
+
+  border-radius: 10px;
+  /* le damos un degradado a blanco hacia abajo */
+  background-image: linear-gradient(to bottom, #9455a2, #fff);
 }
 
 /* Estilos para el footer */
@@ -87,43 +98,95 @@ footer {
   align-items: center;
   width: 100%;
   background-color: #9455a280;
+  /* degradamos a azul hacia abajo */
+  background-image: linear-gradient(to bottom, #9455a280, #9455a2);
   padding: 10px;
 }
 
 /* Estilos para la marca del sitio */
 .site-branding-xtractr {
-  display: flex;
+  width: 30%;
+  float: right;
   justify-content: center;
   align-items: center;
-  height: 6em; /* Ajuste para que no se extienda más allá del contenido */
-  margin: 1em; /* Eliminado el exceso de margen superior e inferior */
+  /* se muestra en el borde de la derecha */
+  height: 8em; /* Ajuste para que no se extienda más allá del contenido */
+   /* Eliminado el exceso de margen superior e inferior */
 }
 /* Estilos para la imagen de la marca del sitio */
 .site-branding-xtractr img {
-  width: 6em;
-  height: 6em;
-  border-radius: 10%;
-  padding: 1em;
-  margin: 1em;
-  background-color: #ffffff6e;
-}
-.primary-menu {
-  /*centramos el contenido a lo alto y lo colocamos a la derecha */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  
-  margin: 10px;
+  /* el logo debe ir pegado a la derecha */
   height: 8em;
+  transition: all 2s ease;
+
+  float: right;
+  border-radius: 10px;
+  margin-bottom: 10em;
+  }
+  .site-branding-xtractr img:hover {
+    /* el logo debe ir pegado a la derecha */
+
+    height: 8em;
+  /*hacemos que el logo se agrande al pasar el mouse por encima */
+    transform: scale(1.1);
+
+    transition: all 2s ease;
+    float: right;
+    border-radius: 10px;
+    margin-bottom: 10em;
+    }
+.primary-menu {
+  width: 30%;
+  /*centramos el contenido a lo alto y lo colocamos a la derecha */
+  display: inline-flex;
+  align-items: center;
+  float: left;
+  width: 70%;
+  height: 6em;
 }
 /* la lista <li> que hay dentro de primary-menu se muestran los unos al lado de los otros */
 .primary-menu li {
 
-  display: inline-block;
-  justify-content: flex-end;
+  /* le damos estilo de boton con el color morado que estamos usando */
+
+  display: inline-flex;
+
+
+
   align-items: center;
   /* le damos un margen */
   margin: 0 10px;
+}
+.primary-menu li a:hover{
+  border-radius: 10px;
+  background-color: #9455a2;
+  padding: 10px;
+  margin: 10px;
+  list-style: none;
+  /* quitamos la decoracion le damos bold y mayusculas */
+  /* el texto es color blanco */
+  color: #fff!important;
+  text-decoration: none!important;
+  font-weight: bold;
+  transition: all 2s ease;
+
+}
+.primary-menu li a{
+  border-radius: 10px;
+  background-color: #9455a24d;
+  padding: 10px;
+  margin: 10px;
+  scale: 1.2;
+  list-style: none;
+  transform: scale(1.1);
+  /* animamos los cambios de color y de tamaño */
+  transition: all 2s ease;
+
+  /* quitamos la decoracion le damos bold y mayusculas */
+  /* el texto es color blanco */
+  color: #fff!important;
+  text-decoration: none!important;
+  font-weight: bold;
 }
 .user-message{
   /* le damos estilo de whatsapp como si fuera el mensaje enviado por el mi */
@@ -144,4 +207,109 @@ footer {
   margin: 5px;
   max-width: 70%;
   float: right;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    display: inline-table;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+    border-radius: 10px;
+    /* le damos un degradado a blanco hacia abajo */
+    background-image: linear-gradient(to bottom, #9455a2, #fff);
+  }
+  /* los botones del menu se hacen mas pequeños y se ponen uno debajo del otro */
+  .primary-menu li {
+
+    /* le damos estilo de boton con el color morado que estamos usando */
+  
+    display: inline-table;
+  
+  
+  
+    align-items: center;
+    /* le damos un margen */
+    margin: 0 10px;
+  }
+  .primary-menu li a:hover{
+    border-radius: 10px;
+    background-color: #9455a2;
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    /* quitamos la decoracion le damos bold y mayusculas */
+    /* el texto es color blanco */
+    color: #fff!important;
+    text-decoration: none!important;
+    font-weight: bold;
+    transition: all 2s ease;
+  
+  }
+  .primary-menu li a{
+    border-radius: 10px;
+    background-color: #9455a24d;
+    padding: 10px;
+    margin: 10px;
+    scale: 1.2;
+    list-style: none;
+    transform: scale(1.1);
+    /* animamos los cambios de color y de tamaño */
+    transition: all 2s ease;
+  
+    /* quitamos la decoracion le damos bold y mayusculas */
+    /* el texto es color blanco */
+    color: #fff!important;
+    text-decoration: none!important;
+    font-weight: bold;
+  }
+  .logo img {
+      width: 5em;
+      height: 5em;
+  }
+  .navigation {
+      
+  }
+  .navigation a {
+      
+  }
+  .main-content {
+
+      flex-direction: column;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+  }
+  .xtractr-telefono {
+      width: 100%;
+      background-color: #9455a280;
+      margin: 10px;
+      padding: 10px;
+      align-items: center;
+  }
+  .xtractr-enviar {
+      float: right;
+  }
+  /* el sidebar ira debajo del content */
+  .sidebar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+
+
+ 
+    }
+    .content {
+      float: left;
+      background-color: #5e9dd480;
+      width: 100%;
+      border-radius: 10px;
+      margin: 0px;
+      padding: 0px;
+
+
+  
+    }
 }
