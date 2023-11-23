@@ -32,13 +32,12 @@
   <section class="content">
     {{ page.content }}
   </section>
-  {% if user.isAuthenticated() %}
+  
     <aside class="sidebar">
       {% if page.sidebar_first %}
         {{ page.sidebar_first }}
       {% endif %}
     </aside>
-  {% endif %}
 </div>
 
 <footer>
