@@ -202,8 +202,230 @@ footer {
   margin: 0px;
   padding: 0px;
 }
+/* ---------------------------------------------------USER LOGIN--------------------------------------------------- */
+/* Estilos para el formulario de inicio de sesión */
+.user-login-form {
+  /* Estilos generales del formulario */
+  margin: 0 auto;
+  max-width: 400px;
+}
 
+/* Estilos para los campos de entrada */
+.user-login-form input[type="text"],
+.user-login-form input[type="password"] {
+  /* Estilos comunes para los campos de texto y contraseña */
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
 
+/* Estilos para etiquetas de campos */
+.user-login-form label {
+  font-weight: bold;
+}
+
+/* Estilos para el botón de inicio de sesión */
+.user-login-form input[type="submit"] {
+  /* Estilos para el botón */
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #5C9BD3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor sobre el botón */
+.user-login-form input[type="submit"]:hover {
+  background-color: #4678a9;
+}
+/* ---------------------------------------------------USER REGISTER--------------------------------------------------- */
+/* Estilos para el formulario de registro de usuarios */
+.user-register-form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+/* Estilos para los campos de entrada de texto */
+.user-register-form input[type="text"],
+.user-register-form input[type="email"],
+.user-register-form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos para etiquetas de campos */
+.user-register-form label {
+  font-weight: bold;
+}
+
+/* Estilos para el botón de registro */
+.user-register-form input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #5C9BD3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor sobre el botón */
+.user-register-form input[type="submit"]:hover {
+  background-color: #4678a9;
+}
+
+/* Estilos para la sección de opciones de contacto */
+.user-register-form details {
+  margin-top: 15px;
+}
+
+/* Estilos para los checkbox de contacto */
+.user-register-form input[type="checkbox"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Estilos para la descripción de contacto */
+.user-register-form .description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+/* ---------------------------------------------------CLIENT PROFILE--------------------------------------------------- */
+/* Estilos para el formulario de añadir cliente */
+.node-clientes-form {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Estilos para los campos de entrada de texto */
+.node-clientes-form input[type="text"],
+.node-clientes-form input[type="number"],
+.node-clientes-form input[type="email"],
+.node-clientes-form input[type="date"],
+.node-clientes-form input[type="time"],
+.node-clientes-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos para etiquetas de campos */
+.node-clientes-form label {
+  font-weight: bold;
+}
+
+/* Estilos para la sección de botones */
+.node-clientes-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.node-clientes-form input[type="submit"],
+.node-clientes-form input[type="button"] {
+  width: 48%;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #5C9BD3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor sobre los botones */
+.node-clientes-form input[type="submit"]:hover,
+.node-clientes-form input[type="button"]:hover {
+  background-color: #4678a9;
+}
+/* Estilos para el formulario de añadir cliente */
+.node-clientes-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para los campos de entrada de texto */
+.node-clientes-form > div[class^="field--type-"] {
+  order: -1; /* Colocar todos los campos arriba */
+}
+
+/* Estilos para la sección de botones */
+.node-clientes-form .form-actions {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+/* Estilos para los campos de entrada de texto */
+.node-clientes-form input[type="text"],
+.node-clientes-form input[type="number"],
+.node-clientes-form input[type="email"],
+.node-clientes-form input[type="date"],
+.node-clientes-form input[type="time"],
+.node-clientes-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos para etiquetas de campos */
+.node-clientes-form label {
+  font-weight: bold;
+}
+
+/* Estilos para la sección de botones */
+.node-clientes-form .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.node-clientes-form input[type="submit"],
+.node-clientes-form input[type="button"] {
+  width: 48%;
+  padding: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #5C9BD3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor sobre los botones */
+.node-clientes-form input[type="submit"]:hover,
+.node-clientes-form input[type="button"]:hover {
+  background-color: #4678a9;
+}
 @media screen and (max-width: 600px) {
   .header {
     display: inline-table;
